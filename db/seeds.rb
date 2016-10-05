@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Receipt.create([{ name: 'Gehalt', amount: 3800 }, { name: 'Kindergeld', amount: 300 }])

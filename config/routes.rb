@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   # mount ActionCable.server => "/cable"
 
   match "/websocket", :to => ActionCable.server, via: [:get, :post]
-
+  resources :receipts
 end

@@ -29,8 +29,8 @@ class ClockChannel < ApplicationCable::Channel
   def tick
     loop do
       logger.info ">>> Tick!"
-      broadcast(random_number: rand(1..100))
-      sleep 2
+      broadcast({id: SecureRandom.uuid, random_number: rand(1..100)})
+      sleep 5
       break unless @subscribed && @run
     end
   end
